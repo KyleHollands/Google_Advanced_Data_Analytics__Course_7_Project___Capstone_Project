@@ -1,6 +1,6 @@
 # Tree-Based Classification Model for Predicting Employee Churn
 
-**Project Overview**  
+**Project Overview**
 The objective of this capstone project is to analyze data from a hypothetical corporation to assess the factors driving employee churn. In the final iteration, the Random Forest model achieved an accuracy of 96%, a recall of 90%, and an F1 score of 88%. This model identified the most predictive features that determine whether employees stay or leave. The key factors include 'number_project,' 'last_evaluation,' 'tenure,' and 'overworked.'
 
 **Business Understanding**  
@@ -12,7 +12,7 @@ The dataset used in this analysis contains self-reported information from employ
 **Modeling and Evaluation**  
 The final Random Forest model, which included the engineered feature 'overworked,' was employed to identify the most predictive factors for evaluating whether an employee would leave or stay. The following features were found to be the most significant:
 
-Feature Importances
+***Feature Importances***
 - number_project: 0.367225
 - last_evaluation: 0.311365
 - tenure: 0.236839
@@ -20,7 +20,7 @@ Feature Importances
 
 The evaluation scores demonstrate strong performance, particularly in terms of accuracy and recall:
 
-Model Scoring Metrics
+***Model Scoring Metrics***
 - AUC: 0.970929  
 - Accuracy: 0.966448  
 - Precision: 0.895719  
