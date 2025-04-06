@@ -1,19 +1,26 @@
 # Tree-Based Classification Model for Predicting Employee Churn
 
 **Project Overview**  
-The objective of this capstone project is to analyze data from a hypothetical corporation to assess the factors driving employee churn. The data was obtained from the HR department of Salifort Motors and includes information about employees such as hours worked, recent performance review scores, promotion status, and other relevant metrics.
-
-The Logistic Regression model performed reasonably well in predicting employees likely to stay, but its accuracy in identifying those who would leave was not as strong. In contrast, the tree-based models showed significantly better performance, especially the second iteration of the Random Forest model after tuning parameters, dropping irrelevant features, and engineering an additional feature.
+The objective of this capstone project is to analyze data from a hypothetical corporation to assess the factors driving employee churn. In the final iteration, the Random Forest model achieved an accuracy of 96%, a recall of 90%, and an F1 score of 88%. This model identified the most predictive features that determine whether employees stay or leave. The key factors include 'number_project,' 'last_evaluation,' 'tenure,' and 'overworked.'
 
 **Business Understanding**  
-The primary stakeholders in this project were the HR department, which sought deeper insights into employee churn. The findings from this analysis aim to support data-informed decisions that enhance employee satisfaction and engagement, ultimately resulting in improved retention rates.
+The primary stakeholders for this project were the HR department, which aimed to gain deeper insights into employee churn. The findings from this analysis are intended to inform data-driven decisions that enhance employee satisfaction and engagement, ultimately leading to improved retention rates.
 
 **Data Understanding**  
-The dataset contained various employee-related variables of different formats (float64, int64, and object types), including the number of concurrent projects, evaluation scores, overwork status, salary, and departmental information. With the collected data, exploratory data analysis (EDA) was conducted, visualizations were generated to uncover trends and patterns, statistical tests were carried out to assess feature significance, and both regression and tree-based models were developed.
+The dataset used in this analysis contains self-reported information from employees of a fictitious multinational vehicle manufacturing corporation. It consists of 14999 rows and 10 features (columns) of various data types (float64, int64, and object). To prepare the data for modeling, we addressed duplicates, outliers, and missing values. Additionally, we engineered a boolean feature called 'overworked' to represent employees who worked more than 175 hours; this feature was incorporated in the second iteration of the Random Forest model.
 
 **Modeling and Evaluation**  
-The models employed included Logistic Regression, Decision Trees, and Random Forests. Multiple iterations were conducted after feature engineering and selection to enhance model performance. The final metrics for the top-performing model were:
+The final Random Forest model, which included the engineered feature 'overworked,' was employed to identify the most predictive factors for evaluating whether an employee would leave or stay. The following features were found to be the most significant:
 
+Feature Importances
+- number_project: 0.367225
+- last_evaluation: 0.311365
+- tenure: 0.236839
+- overworked: 0.079686
+
+The evaluation scores demonstrate strong performance, particularly in terms of accuracy and recall:
+
+Model Scoring Metrics
 - AUC: 0.970929  
 - Accuracy: 0.966448  
 - Precision: 0.895719  
@@ -21,6 +28,6 @@ The models employed included Logistic Regression, Decision Trees, and Random For
 - F-score: 1 - 0.900985  
 
 **Conclusion**  
-The analysis concluded that employees at Salifort Motors are often overworked, leading to dissatisfaction and higher churn rates. The factors contributing to this issue include hours worked, the number of projects assigned, evaluation scores, and, to a lesser extent, salary.
+The analysis concluded that employees at Salifort Motors often feel overworked, which leads to dissatisfaction and higher churn rates. The factors contributing to this issue include the number of hours worked, the number of projects assigned, evaluation scores, and, to a lesser extent, salary.
 
-The recommendation is to improve the work culture by addressing these issues. Suggested actions include capping hours worked, recognizing and rewarding employees who put in extra hours, limiting the number of concurrent projects, holding more frequent company meetings to discuss concerns, and considering long-tenured employees for promotions.
+To improve the work culture and address these issues, it is recommended to implement actions such as capping working hours, recognizing and rewarding employees who put in extra effort, limiting the number of concurrent projects, conducting more frequent company meetings to discuss concerns, and considering long-tenured employees for promotions.
